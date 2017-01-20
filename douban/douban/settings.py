@@ -71,7 +71,9 @@ ITEM_PIPELINES = {
     'douban.pipelines.ImageDownloadPipeline': 300,
 }
 
-IMAGES_STORE='/work/my_scrapy'
+import os
+
+IMAGES_STORE=os.path.join(os.path.dirname(__file__), "images")
 IMAGES_EXPIRES = 90
 
 # Enable and configure the AutoThrottle extension (disabled by default)
